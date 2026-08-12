@@ -20,3 +20,220 @@
   transform-origin: center center;
   backface-visibility: hidden;
 }
+
+
+
+
+/* =====================================================
+   LAPTOP
+   1025px - 1366px
+===================================================== */
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .contact {
+    min-height: 60vh;
+
+    padding: 90px 35px;
+  }
+
+  .contact-heading {
+    font-size: clamp(42px, 6vw, 75px);
+  }
+
+  .contact-description {
+    max-width: 600px;
+
+    font-size: 18px;
+  }
+
+  .contact-link {
+    margin-top: 28px;
+  }
+
+  .water-text {
+    font-size: 36px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+   769px - 1024px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact {
+    min-height: 55vh;
+
+    padding: 80px 30px;
+  }
+
+  .contact-content {
+    max-width: 750px;
+  }
+
+  .contact-heading {
+    font-size: clamp(42px, 7vw, 68px);
+
+    margin-bottom: 18px;
+  }
+
+  .contact-description {
+    max-width: 550px;
+
+    font-size: 17px;
+  }
+
+  .contact-link {
+    margin-top: 28px;
+  }
+
+  .contact-arrow {
+    width: 23px;
+    height: 23px;
+  }
+
+  .water-text {
+    font-size: 32px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   <= 768px
+===================================================== */
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: auto;
+
+    padding: 80px 20px;
+  }
+
+  .contact-content {
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .contact-heading {
+    margin-bottom: 18px;
+
+    font-size: clamp(36px, 10vw, 55px);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.045em;
+  }
+
+  .contact-description {
+    max-width: 520px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+  .contact-link {
+    margin-top: 35px;
+
+    gap: 8px;
+
+    max-width: 100%;
+  }
+
+  .contact-arrow {
+    width: 22px;
+    height: 22px;
+  }
+
+  .water-text {
+    font-size: clamp(26px, 8vw, 34px);
+
+    letter-spacing: -0.02em;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   <= 480px
+===================================================== */
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 70px 18px;
+  }
+
+  .contact-heading {
+    font-size: clamp(32px, 10vw, 45px);
+
+    margin-bottom: 16px;
+  }
+
+  .contact-description {
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+  .contact-link {
+    margin-top: 30px;
+
+    gap: 7px;
+  }
+
+  .contact-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .water-text {
+    font-size: clamp(23px, 8vw, 30px);
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   <= 360px
+===================================================== */
+
+@media (max-width: 360px) {
+  .contact {
+    padding: 60px 15px;
+  }
+
+  .contact-heading {
+    font-size: 31px;
+  }
+
+  .contact-description {
+    font-size: 13px;
+  }
+
+  .contact-arrow {
+    width: 18px;
+    height: 18px;
+  }
+
+  .water-text {
+    font-size: 22px;
+  }
+}
+
+
+/* =====================================================
+   TOUCH DEVICES
+===================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  .water-letter {
+    /*
+      Mouse distortion isn't useful on touch devices.
+      Keep letters stable.
+    */
+    transform: none !important;
+  }
+}
