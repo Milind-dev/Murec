@@ -13,6 +13,7 @@ const Footer = () => {
   const contactRef = useRef(null);
   const circleRef = useRef(null);
 
+  
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.set(
