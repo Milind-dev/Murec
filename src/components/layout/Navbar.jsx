@@ -173,23 +173,17 @@ export default function Navbar() {
         {/* MY<span>SITE</span> */}
       </div>
 
-      {/* Navigation */}
 
       <div className="nav-links">
         {navItems.map((item) => (
           <NavLink key={item.path} to={item.path} className="nav-item">
-            {/* Animated shape */}
 
             <span className="nav-shape"></span>
-
-            {/* Text */}
 
             <span className="nav-text">{item.name}</span>
           </NavLink>
         ))}
       </div>
-
-      {/* Button */}
 
       <button className="nav-button">Get Started</button>
     </nav>

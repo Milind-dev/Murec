@@ -1,0 +1,148 @@
+.history-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #f4f1e8;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.history-container {
+  width: 100%;
+  padding: 80px 40px;
+}
+
+
+/* =========================================
+   SMALL LABEL
+========================================= */
+
+.history-label {
+  margin-bottom: 40px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   TEXT WRAPPER
+========================================= */
+
+.history-text-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  perspective: 1000px;
+}
+
+
+/* =========================================
+   BIG DESCRIPTION
+========================================= */
+
+.history-description {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0;
+
+  font-size: clamp(
+    48px,
+    1.1vw,
+    15px
+  );
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+
+  color: #f4f1e8;
+
+  transform-origin: 50% 100%;
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.history-button {
+  margin-top: 60px;
+  margin-left: 37rem;
+
+  padding: 14px 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.history-button:hover {
+  background: white;
+
+  color: black;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .history-container {
+    padding: 60px 20px;
+  }
+
+  .history-label {
+    margin-bottom: 25px;
+  }
+
+  .history-description {
+    font-size: 42px;
+
+    line-height: 0.98;
+  }
+
+  .history-button {
+    margin-top: 40px;
+  }
+}
