@@ -1,217 +1,126 @@
 .partners-section {
   position: relative;
-
   width: 100%;
   height: 100vh;
-
   overflow: hidden;
-
   background: #f4f2ee;
-
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 
-/* =========================================
-   COUNTER
-========================================= */
-
 .partners-counter {
   position: absolute;
-
   top: 32px;
   left: 40px;
-
   z-index: 20;
-
   font-size: 14px;
-
   letter-spacing: 0.08em;
 }
 
 .partners-counter-active {
   font-weight: 600;
-
-  color: #000;
+ color: #000;
 }
 
 .partners-counter-total {
   color: rgba(0, 0, 0, 0.45);
 }
 
-
-/* =========================================
-   PANEL
-========================================= */
-
 .partner-panel {
   position: absolute;
-
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   padding: 40px;
-
   visibility: hidden;
 }
 
-
-/* =========================================
-   LEFT CONTENT
-========================================= */
-
 .partner-content {
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   padding-right: 80px;
 }
 
-
 .partner-eyebrow {
   margin-bottom: 18px;
-
   font-size: 12px;
-
   font-weight: 600;
-
   text-transform: uppercase;
-
   letter-spacing: 0.18em;
-
   color: #b5561f;
 }
 
-
 .partner-title {
   margin: 0 0 24px;
-
   font-size: clamp(50px, 6vw, 100px);
-
   font-weight: 500;
-
   line-height: 0.9;
-
   letter-spacing: -0.04em;
-
   text-transform: uppercase;
-
   color: #111;
 }
-
 
 .partner-description {
   max-width: 520px;
-
   margin: 0 0 40px;
-
   font-size: 16px;
-
   line-height: 1.6;
-
   color: rgba(0, 0, 0, 0.65);
 }
 
-
-/* =========================================
-   INFO
-========================================= */
-
 .partner-info {
   display: flex;
-
   gap: 60px;
-
   max-width: 520px;
-
   padding-top: 18px;
-
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
-
-
 .partner-info-item {
   display: flex;
-
   flex-direction: column;
-
   gap: 6px;
 }
 
-
 .partner-info-item span {
   font-size: 10px;
-
   text-transform: uppercase;
-
   letter-spacing: 0.12em;
-
   color: rgba(0, 0, 0, 0.45);
 }
 
-
 .partner-info-item strong {
   font-size: 13px;
-
   font-weight: 600;
-
   color: #111;
 }
 
-
-/* =========================================
-   IMAGE
-========================================= */
-
 .partner-image-wrapper {
   position: relative;
-
   width: 80%;
   height: 80%;
   border-radius: 61px;
   overflow: hidden;
 }
 
-
 .partner-image {
   position: absolute;
-
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
-
-/* =========================================
-   IMAGE NUMBER
-========================================= */
-
 .partner-image-number {
   position: absolute;
-
   right: 24px;
   bottom: 20px;
-
   font-size: 80px;
-
   font-weight: 600;
-
   line-height: 1;
-
   color: rgba(255, 255, 255, 0.9);
 }

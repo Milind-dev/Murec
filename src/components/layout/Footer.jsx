@@ -15,7 +15,6 @@ const Footer = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Initial state
       gsap.set(
         [
           logoRef.current,
@@ -76,7 +75,6 @@ const Footer = () => {
           "-=0.4",
         );
 
-      // Circular button continuous rotation
       gsap.to(circleRef.current, {
         rotation: 360,
         duration: 15,
@@ -118,7 +116,6 @@ const Footer = () => {
           </span>
         </div>
 
-        {/* Main footer content */}
         <div className="footer-grid">
           {/* Column 1 */}
           <div ref={addColumnRef} className="footer-column">

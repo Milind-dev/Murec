@@ -6,11 +6,14 @@ import team2 from "../assests/images/team_2.webp";
 import team3 from "../assests/images/team_3.webp";
 import t3 from "../assests/images/t3_01.webp";
 import History from './History';
+import Associations from './Associations';
+import Legacy from './Legacy';
+import Contact from './Contact';
 
 export default function Home() {
   const historytext = {
     description:
-      "For over seven decades, we stood for perseverance, integrity, and nation-building through enterprise. Every step was guided by one oath: quality before profit, trust before everything.",
+      "MUREC is guided by values that shape every decision—building trust, delivering quality, practicing transparency, and embracing innovation as the foundation of everything we create.",
   };
   const partners = [
     {
@@ -49,8 +52,11 @@ export default function Home() {
  
   return (
     <div>
+      <Legacy />
       <History historytext={historytext}  />
+      <Associations />
       <Partners partners={partners} />
+      <Contact />
     </div>
   );
 }

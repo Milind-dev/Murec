@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import "./Navbar.css";
+import murec from "../../assests/images/murecicon.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,20 +24,11 @@ const navItems = [
 
 export default function Navbar() {
   const navRef = useRef(null);
-
   useEffect(() => {
     const nav = navRef.current;
-
     if (!nav) return;
-
     const items = nav.querySelectorAll(".nav-item");
-
-    const ctx = gsap.context(() => {
-      /*
-      ==========================================
-      SCROLL ANIMATION
-      ==========================================
-      */
+     const ctx = gsap.context(() => {
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -50,11 +41,6 @@ export default function Navbar() {
         },
       });
 
-      /*
-        STORY
-        left + up
-      */
-
       tl.to(
         items[0],
         {
@@ -65,11 +51,6 @@ export default function Navbar() {
         },
         0,
       );
-
-      /*
-        PROFILE
-        up
-      */
 
       tl.to(
         items[1],
@@ -82,11 +63,6 @@ export default function Navbar() {
         0,
       );
 
-      /*
-        GALLERY
-        right + up
-      */
-
       tl.to(
         items[2],
         {
@@ -98,18 +74,11 @@ export default function Navbar() {
         0,
       );
 
-      /*
-      ==========================================
-      HOVER ANIMATION
-      ==========================================
-      */
-
       items.forEach((item) => {
         const shape = item.querySelector(".nav-shape");
         const text = item.querySelector(".nav-text");
 
         const enter = () => {
-          // Shape animation
           gsap.fromTo(
             shape,
             {
@@ -125,8 +94,6 @@ export default function Navbar() {
               ease: "power3.out",
             },
           );
-
-          // Text animation
           gsap.fromTo(
             text,
             {
@@ -167,19 +134,15 @@ export default function Navbar() {
 
   return (
     <nav ref={navRef} className="navbar">
-      {/* Logo */}
-
       <div className="logo">
         {/* MY<span>SITE</span> */}
+        <img src={murec} />
       </div>
-
 
       <div className="nav-links">
         {navItems.map((item) => (
           <NavLink key={item.path} to={item.path} className="nav-item">
-
             <span className="nav-shape"></span>
-
             <span className="nav-text">{item.name}</span>
           </NavLink>
         ))}

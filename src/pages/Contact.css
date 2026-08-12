@@ -1,0 +1,22 @@
+.contact-heading {
+  margin: 0 0 20px;
+  font-size: clamp(40px, 6vw, 90px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.water-text {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.water-letter {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: center center;
+  backface-visibility: hidden;
+}

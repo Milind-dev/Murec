@@ -8,9 +8,15 @@
   overflow: hidden;
 
   z-index: 9999;
+
+  background: #000;
 }
 
-/* Video Background */
+
+/* =========================
+   VIDEO
+========================= */
+
 .loader-video {
   position: absolute;
   inset: 0;
@@ -23,54 +29,77 @@
   z-index: 1;
 }
 
-/* Dark layer */
+
+/* =========================
+   OVERLAY
+========================= */
+
 .loader-overlay {
   position: absolute;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.2);
 
   z-index: 2;
+
+  pointer-events: none;
 }
 
-/* Loader above video */
-.loader-content {
+
+/* =========================
+   PERCENTAGE
+========================= */
+
+/* .loader-percentage {
   position: absolute;
 
-  left: 50%;
-  bottom: 10%;
+  top: 30px;
+  right: 40px;
 
-  transform: translateX(-50%);
-
-  width: min(500px, 80%);
 
   z-index: 3;
-}
 
-/* Percentage */
-.percentage {
-  color: white;
+  color: gray;
 
-  font-size: 60px;
-  font-weight: 600;
+  font-size: 58px;
+  font-weight: 500;
 
-  margin-bottom: 15px;
-}
+  font-family: Arial, sans-serif;
 
-/* Background of progress bar */
-.bar-container {
-  width: 100%;
-  height: 5px;
+  line-height: 1;
+    letter-spacing: -5px;
 
-  background: rgba(255, 255, 255, 0.3);
+} */
 
-  overflow: hidden;
-}
+.loader-percentage {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 3;
 
-/* Progress */
-.bar {
-  width: 1%;
-  height: 100%;
+  color: #8c8c8c;
 
-  background: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+   /* position: absolute; */
+
+  /* top: 30px; */
+  /* right: 40px; */
+
+
+  /* z-index: 3; */
+
+  /* color: gray; */
+
+  /* font-size: 58px; */
+  /* font-weight: 500; */
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1;
+    letter-spacing: -5px;
 }

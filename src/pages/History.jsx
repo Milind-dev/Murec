@@ -2,162 +2,168 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./History.css";
+import historymurec from "../assests/images/murecicon.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function History({ historytext }) {
   const sectionRef = useRef(null);
-  const textRef = useRef(null);
-  const btnref = useRef(null);
+  const wordsRef = useRef([]);
+  const buttonRef = useRef(null);
 
   useLayoutEffect(() => {
     if (!historytext?.description) return;
 
     const ctx = gsap.context(() => {
-      const text = textRef.current;
-      const button = btnref.current;
-
-      // Initial position
-      gsap.set(text, {
-        yPercent: 120,
-        rotateX: -70,
-        skewY: 8,
-        scaleY: 1.15,
+      const words = wordsRef.current;
+      const button = buttonRef.current;
+      gsap.set(words, {
+        y: 80,
+        rotate: 40,
         opacity: 0,
+        scale: 0.95,
+
+        transformOrigin: "0% 100%",
       });
 
-      gsap.to(text, {
-        yPercent: 0,
-        rotateX: 0,
-        skewY: 0,
-        scaleY: 1,
-        opacity: 1,
+ 
+gsap.set(words, {
+  y: 25,
+  rotate: 30,
+  opacity: 0,
+  scale: 0.98,
+  transformOrigin: "0% 100%",
+});
 
-        duration: 1.4,
+gsap.to(words, {
+  y: 0,
+  rotate: 0,
+  opacity: 1,
+  scale: 1,
 
-        ease: "power4.out",
+  duration: 2.7,
 
-        scrollTrigger: {
-          trigger: sectionRef.current,
+  stagger: 0.08,
 
-          start: "top 75%",
-          end: "top 25%",
+  ease: "power3.out",
 
-          scrub: 1,
-        },
+  scrollTrigger: {
+    trigger: sectionRef.current,
+
+    start: "top 70%",
+
+    toggleActions: "play none none reverse",
+  },
+});
+
+   
+
+      if (!button) return;
+
+      const buttonX = gsap.quickTo(button, "x", {
+        duration: 0.4,
+        ease: "power3.out",
       });
-        const waterAnimation = gsap.timeline({
-        repeat: -1,
-        yoyo: true,
+
+      const buttonY = gsap.quickTo(button, "y", {
+        duration: 0.4,
+        ease: "power3.out",
+      });
+
+
+      const handleMouseMove = (event) => {
+        const rect = button.getBoundingClientRect();
+
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const moveX = (mouseX - centerX) * 0.2;
+        const moveY = (mouseY - centerY) * 0.2;
+        buttonX(moveX);
+        buttonY(moveY);
+      };
+
+   
+
+      const handleMouseEnter = () => {
+        gsap.to(button, {
+          scale: 1.08,
+          duration: 0.35,
+          ease: "power3.out",
         });
+      };
 
-        waterAnimation
-        .to(text, {
-            y: -6,
-            skewX: 1.5,
-            rotateZ: 0.3,
-            duration: 2.2,
-            ease: "sine.inOut",
-        })
-        .to(text, {
-            y: 5,
-            skewX: -1.5,
-            rotateZ: -0.3,
-            duration: 2.5,
-            ease: "sine.inOut",
+      /*
+      Mouse leave
+      */
+
+      const handleMouseLeave = () => {
+        buttonX(0);
+        buttonY(0);
+
+        gsap.to(button, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "elastic.out(1, 0.5)",
         });
-         if (button) {
-           const buttonX = gsap.quickTo(button, "x", {
-             duration: 0.4,
-             ease: "power3.out",
-           });
+      };
 
-           const buttonY = gsap.quickTo(button, "y", {
-             duration: 0.4,
-             ease: "power3.out",
-           });
+      button.addEventListener("mousemove", handleMouseMove);
+      button.addEventListener("mouseenter", handleMouseEnter);
+      button.addEventListener("mouseleave", handleMouseLeave);
 
-           const handleMouseMove = (event) => {
-             const rect = button.getBoundingClientRect();
-
-             const mouseX = event.clientX - rect.left;
-             const mouseY = event.clientY - rect.top;
-
-             const centerX = rect.width / 2;
-             const centerY = rect.height / 2;
-
-             const moveX = (mouseX - centerX) * 0.25;
-             const moveY = (mouseY - centerY) * 0.25;
-
-             buttonX(moveX);
-             buttonY(moveY);
-           };
-
-           const handleMouseEnter = () => {
-             gsap.to(button, {
-               scale: 1.08,
-               duration: 0.4,
-               ease: "power3.out",
-             });
-           };
-
-           const handleMouseLeave = () => {
-             buttonX(0);
-             buttonY(0);
-
-             gsap.to(button, {
-               scale: 1,
-               duration: 0.5,
-               ease: "elastic.out(1, 0.5)",
-             });
-           };
-
-           button.addEventListener("mousemove", handleMouseMove);
-
-           button.addEventListener("mouseenter", handleMouseEnter);
-
-           button.addEventListener("mouseleave", handleMouseLeave);
-
-           return () => {
-             button.removeEventListener("mousemove", handleMouseMove);
-
-             button.removeEventListener("mouseenter", handleMouseEnter);
-
-             button.removeEventListener("mouseleave", handleMouseLeave);
-           };
-         }
-        
+      return () => {
+        button.removeEventListener("mousemove", handleMouseMove);
+        button.removeEventListener("mouseenter", handleMouseEnter);
+        button.removeEventListener("mouseleave", handleMouseLeave);
+      };
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+    };
   }, [historytext]);
 
+  const descriptionWords = historytext?.description?.split(" ") || [];
+
   return (
-    <section
-      ref={sectionRef}
-      className="history-section"
-    >
+    <section ref={sectionRef} className="history-section">
       <div className="history-container">
-
-     
-
+          <img src={historymurec} className="historyicon" alt="History Icon" />
         <div className="history-text-wrapper">
-          <p
-            ref={textRef}
-            className="history-description"
-          >
-            {historytext?.description}
-          </p>
+          <div className="history-text-inner">
+
+            <h2 className="history-heading">LIVING BY PRINCIPLES</h2>
+
+            <p className="history-description">
+              {descriptionWords.map((word, index) => (
+                <span
+                  key={index}
+                  ref={(el) => {
+                    wordsRef.current[index] = el;
+                  }}
+                  className="history-word"
+                >
+                  {word}
+                </span>
+              ))}
+            </p>
+          </div>
         </div>
 
-        <button
+             <button
+          ref={buttonRef}
           className="history-button"
           onClick={() => console.log("History clicked!")}
-          ref={btnref}
         >
-          History
-        </button>
+          <span>HISTORY</span>
 
+          <span className="history-arrow">↗</span>
+        </button>
       </div>
     </section>
   );

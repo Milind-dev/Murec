@@ -33,14 +33,12 @@ export default function Partners({ partners }) {
 
       if (nextIndex === current) return;
 
-      // Hide current
       gsap.to(panels[current], {
         autoAlpha: 0,
         duration: 0.5,
         ease: "power2.inOut",
       });
 
-      // Show next
       gsap.to(panels[nextIndex], {
         autoAlpha: 1,
         duration: 0.5,
@@ -50,7 +48,6 @@ export default function Partners({ partners }) {
       activeIndexRef.current = nextIndex;
       setActiveIndex(nextIndex);
     };
-
     const st = ScrollTrigger.create({
       trigger: wrapRef.current,
 
@@ -93,8 +90,6 @@ export default function Partners({ partners }) {
 
   return (
     <section ref={wrapRef} className="partners-section">
-      {/* Counter */}
-
       <div className="partners-counter">
         <span className="partners-counter-active">
           {String(activeIndex + 1).padStart(2, "0")}
@@ -106,8 +101,6 @@ export default function Partners({ partners }) {
         </span>
       </div>
 
-      {/* Panels */}
-
       {partners.map((partner, index) => (
         <div
           key={partner.id}
@@ -116,7 +109,6 @@ export default function Partners({ partners }) {
           }}
           className="partner-panel"
         >
-          {/* Left Content */}
 
           <div className="partner-content">
             <div className="partner-eyebrow">
@@ -140,7 +132,7 @@ export default function Partners({ partners }) {
             </div>
           </div>
 
-          {/* Right Image */}
+
 
           <div className="partner-image-wrapper">
             <img
