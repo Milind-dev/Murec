@@ -1,0 +1,260 @@
+.navbar {
+  position: relative;
+
+  width: 100%;
+
+  padding: 30px 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  z-index: 100;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.logo {
+  color: #000;
+
+  font-size: 24px;
+
+  font-weight: 600;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+
+/* =================================
+   NAV
+================================= */
+
+.nav-links {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 45px;
+}
+
+
+/* =================================
+   NAV LINK
+================================= */
+
+.nav-link {
+  position: relative;
+
+  z-index: 3;
+
+  display: block;
+
+  color: #000;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+
+/* =================================
+   TEXT WRAPPER
+================================= */
+
+.text-wrapper {
+  position: relative;
+
+  display: block;
+
+  height: 20px;
+
+  overflow: hidden;
+
+  min-width: max-content;
+}
+
+
+/* =================================
+   BOTH TEXT LAYERS
+================================= */
+
+.text-original,
+.text-clone {
+  display: block;
+
+  height: 20px;
+
+  line-height: 20px;
+
+  will-change:
+    transform,
+    opacity,
+    filter;
+}
+
+
+/* Clone starts below */
+
+.text-clone {
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+}
+
+
+/* =================================
+   CIRCLE
+================================= */
+
+.nav-circle {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 65px;
+
+  height: 65px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  opacity: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* Ring */
+
+.nav-circle::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
+
+  border-left-color: transparent;
+
+  transform: rotate(-35deg);
+}
+
+
+/* Arrow */
+
+.nav-circle span {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 24px;
+
+  color: #000;
+
+  font-weight: 300;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.nav-button {
+  border: none;
+
+  padding: 14px 25px;
+
+  border-radius: 30px;
+
+  background: #000;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .nav-links {
+    gap: 15px;
+  }
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #d5d5d5;
+
+  
+}
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+}

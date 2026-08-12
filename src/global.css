@@ -6,6 +6,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  
 }
 
 
@@ -41,6 +42,7 @@ body,
 #root {
   width: 100%;
   min-height: 100%;
+
 }
 
 html {
@@ -49,14 +51,17 @@ html {
 
 body {
   font-family: var(--font-primary);
+  
   color: var(--color-text);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   overflow-x: hidden;
+      color: var(--color-black);
+  /* background: var(--color-bg); */
 
-  background:
+  /* background:
     radial-gradient(
       circle at 50% 45%,
       rgba(25, 150, 65, 0.45) 0%,
@@ -64,12 +69,15 @@ body {
       rgba(0, 25, 12, 0.9) 70%,
       rgba(0, 15, 7, 1) 100%
     ),
-    rgba(0, 25, 12, 0.95);
+    rgba(0, 25, 12, 0.95); */
 }
 
 a {
-  color: inherit;
+  /* color: inherit;
+   */
+     color: var(--color-black);
   text-decoration: none;
+  
 }
 
 img {
@@ -82,6 +90,8 @@ input,
 textarea,
 select {
   font: inherit;
+
+
 }
 
 
