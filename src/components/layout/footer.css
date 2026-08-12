@@ -278,77 +278,546 @@
   font-size: 14px;
 }
 
-@media (max-width: 1000px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* =====================================================
+   LAPTOP
+   1025px - 1366px
+===================================================== */
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .footer-container {
+    width: 92%;
+
+    padding-top: 95px;
   }
+
   .footer-cta {
-    right: 8%;
+    width: 200px;
+    height: 200px;
+
+    top: -100px;
+    right: 10%;
   }
+
+  .circle-button {
+    width: 170px;
+    height: 170px;
+  }
+
+  .circle-text {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .circle-arrow {
+    width: 48px;
+    height: 48px;
+
+    font-size: 24px;
+  }
+
+  .footer-logo {
+    margin-bottom: 70px;
+  }
+
+  .logo-p {
+    font-size: 90px;
+  }
+
+  .logo-line {
+    width: 140px;
+    height: 7px;
+  }
+
+  .logo-line::before {
+    height: 52px;
+    top: -52px;
+
+    width: 7px;
+  }
+
+  .logo-text {
+    font-size: 48px;
+  }
+
+  .footer-grid {
+    gap: 35px;
+  }
+
+  .footer-column h3,
+  .footer-newsletter h3 {
+    font-size: 21px;
+  }
+
+  .footer-column a {
+    font-size: 16px;
+  }
+
+  .newsletter-input {
+    height: 65px;
+  }
+
+  .newsletter-input button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .newsletter-input input {
+    font-size: 18px;
+  }
+
   .footer-contact {
-    margin-left: 0;
+    margin-top: 60px;
+
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 60px;
   }
 }
 
 
-@media (max-width: 600px) {
+/* =====================================================
+   TABLET
+   769px - 1024px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
   .footer {
     min-height: auto;
   }
+
   .footer-container {
-    width: 88%;
-    padding-top: 90px;
+    width: 90%;
+
+    padding-top: 100px;
+    padding-bottom: 30px;
   }
 
   .footer-cta {
-    width: 150px;
-    height: 150px;
-    top: -75px;
+    width: 170px;
+    height: 170px;
+
+    top: -85px;
+    right: 7%;
+  }
+
+  .circle-button {
+    width: 145px;
+    height: 145px;
+  }
+
+  .circle-text {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .circle-arrow {
+    width: 44px;
+    height: 44px;
+
+    font-size: 21px;
+  }
+
+  .footer-logo {
+    margin-bottom: 60px;
+  }
+
+  .logo-p {
+    font-size: 78px;
+  }
+
+  .logo-line {
+    width: 115px;
+    height: 6px;
+  }
+
+  .logo-line::before {
+    width: 6px;
+    height: 45px;
+    top: -45px;
+  }
+
+  .logo-text {
+    font-size: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 35px;
+  }
+
+  .footer-column h3,
+  .footer-newsletter h3 {
+    font-size: 21px;
+
+    margin-bottom: 18px;
+  }
+
+  .footer-column a {
+    font-size: 16px;
+  }
+
+  .newsletter-input {
+    height: 65px;
+  }
+
+  .newsletter-input button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .newsletter-input input {
+    font-size: 18px;
+  }
+
+  .footer-contact {
+    margin-top: 60px;
+
+    margin-left: 0;
+
+    width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .footer-bottom {
+    margin-top: 55px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   <= 768px
+===================================================== */
+
+@media (max-width: 768px) {
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-container {
+    width: 90%;
+
+    padding-top: 85px;
+    padding-bottom: 25px;
+  }
+
+  /* =========================
+     CTA
+  ========================= */
+
+  .footer-cta {
+    width: 145px;
+    height: 145px;
+
+    top: -72px;
     right: 5%;
   }
 
   .circle-button {
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
   }
 
   .circle-text {
-    font-size: 8px;
-    letter-spacing: 2px;
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
   }
+
   .circle-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 38px;
+    height: 38px;
+
+    font-size: 19px;
   }
+
+  /* =========================
+     LOGO
+  ========================= */
+
   .footer-logo {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
+
+    max-width: 100%;
   }
+
   .logo-p {
-    font-size: 65px;
+    font-size: clamp(55px, 14vw, 70px);
   }
+
   .logo-line {
-    width: 90px;
+    width: clamp(70px, 18vw, 95px);
+
     height: 5px;
+
+    margin-left: 5px;
   }
+
   .logo-line::before {
     width: 5px;
-    height: 35px;
-    top: -35px;
+
+    height: 32px;
+
+    top: -32px;
   }
+
   .logo-text {
-    font-size: 30px;
+    margin-left: 5px;
+
+    font-size: clamp(27px, 7vw, 34px);
   }
+
+  /* =========================
+     GRID
+  ========================= */
+
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 45px;
+
+    gap: 38px;
   }
+
+  .footer-column h3,
+  .footer-newsletter h3 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+  }
+
+  .footer-column a {
+    width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /* =========================
+     NEWSLETTER
+  ========================= */
+
+  .newsletter-input {
+    height: 60px;
+
+    padding-left: 20px;
+  }
+
+  .newsletter-input input {
+    font-size: 16px;
+  }
+
+  .newsletter-input button {
+    width: 60px;
+    height: 60px;
+
+    font-size: 24px;
+  }
+
+  /* =========================
+     CONTACT
+  ========================= */
+
   .footer-contact {
-    margin-top: 60px;
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-left: 0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+  /* =========================
+     BOTTOM
+  ========================= */
+
+  .footer-bottom {
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   <= 480px
+===================================================== */
+
+@media (max-width: 480px) {
+  .footer-container {
+    width: 91%;
+
+    padding-top: 80px;
+  }
+
+  .footer-cta {
+    width: 125px;
+    height: 125px;
+
+    top: -62px;
+    right: 4%;
+  }
+
+  .circle-button {
+    width: 103px;
+    height: 103px;
+  }
+
+  .circle-text {
+    font-size: 6px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .circle-arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+  .footer-logo {
+    margin-bottom: 50px;
+  }
+
+  .logo-p {
     font-size: 55px;
   }
+
+  .logo-line {
+    width: 70px;
+
+    height: 4px;
+  }
+
+  .logo-line::before {
+    width: 4px;
+
+    height: 28px;
+
+    top: -28px;
+  }
+
+  .logo-text {
+    font-size: 27px;
+  }
+
+  .footer-grid {
+    gap: 35px;
+  }
+
+  .footer-column h3,
+  .footer-newsletter h3 {
+    font-size: 18px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .newsletter-input {
+    height: 56px;
+
+    padding-left: 18px;
+  }
+
+  .newsletter-input input {
+    font-size: 15px;
+  }
+
+  .newsletter-input button {
+    width: 56px;
+    height: 56px;
+
+    font-size: 22px;
+  }
+
+  .footer-contact {
+    margin-top: 45px;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+  }
+
   .footer-bottom {
-    flex-direction: column;
-   gap: 10px;
+    margin-top: 45px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   <= 360px
+===================================================== */
+
+@media (max-width: 360px) {
+  .footer-container {
+    width: 92%;
+  }
+
+  .footer-cta {
+    width: 110px;
+    height: 110px;
+
+    top: -55px;
+  }
+
+  .circle-button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle-text {
+    font-size: 5px;
+
+    letter-spacing: 1px;
+  }
+
+  .circle-arrow {
+    width: 30px;
+    height: 30px;
+
+    font-size: 15px;
+  }
+
+  .logo-p {
+    font-size: 48px;
+  }
+
+  .logo-line {
+    width: 55px;
+  }
+
+  .logo-text {
+    font-size: 23px;
+  }
+
+  .footer-column h3,
+  .footer-newsletter h3 {
+    font-size: 17px;
+  }
+
+  .footer-contact {
+    font-size: 10px;
   }
 }

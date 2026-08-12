@@ -133,7 +133,7 @@
 }
 
 
-
+/* 
 @media (max-width: 768px) {
   .associations-section {
     padding: 60px 20px;
@@ -169,5 +169,201 @@
     right: -20%;
     top: 45%;
     opacity: 0.35;
+  }
+} */
+
+
+
+/* =====================================================
+   SMALL LAPTOP / TABLET
+   769px - 1024px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .associations-section {
+    min-height: 100vh;
+    padding: 65px 35px;
+  }
+
+  .associations-heading-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .associations-title {
+    font-size: clamp(48px, 7vw, 70px);
+  }
+
+  .associations-left {
+    width: 70%;
+  }
+
+  .associations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .association-item {
+    height: 90px;
+    padding: 15px;
+  }
+
+  .association-item img {
+    max-width: 78%;
+    max-height: 40px;
+  }
+
+  .associations-artwork {
+    top: 35%;
+    right: -8%;
+
+    width: 42%;
+    height: 50%;
+
+    opacity: 0.45;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   <= 768px
+===================================================== */
+
+@media (max-width: 768px) {
+  .associations-section {
+    min-height: auto;
+
+    padding: 60px 20px 80px;
+  }
+
+  /* Heading */
+
+  .associations-heading-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .associations-title {
+    font-size: clamp(38px, 10vw, 54px);
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+  }
+
+  /* Logo section */
+
+  .associations-left {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+  }
+
+  .associations-grid {
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .association-item {
+    height: 90px;
+    padding: 15px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    border-right: 1px solid rgba(0, 0, 0, 0.14);
+  }
+
+  /* Remove right border from every second item */
+
+  .association-item:nth-child(3n) {
+    border-right: 1px solid rgba(0, 0, 0, 0.14);
+  }
+
+  .association-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .association-item img {
+    max-width: 75%;
+    max-height: 38px;
+  }
+
+  /* Artwork */
+
+  .associations-artwork {
+    z-index: 1;
+
+    width: 75%;
+    height: 45%;
+
+    right: -25%;
+    top: 48%;
+
+    opacity: 0.25;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   <= 480px
+===================================================== */
+
+@media (max-width: 480px) {
+  .associations-section {
+    padding: 50px 16px 70px;
+  }
+
+  .associations-heading-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .associations-title {
+    font-size: clamp(34px, 11vw, 48px);
+  }
+
+  .association-item {
+    height: 78px;
+    padding: 10px;
+  }
+
+  .association-item img {
+    max-width: 78%;
+    max-height: 32px;
+  }
+
+  .associations-artwork {
+    width: 85%;
+    height: 40%;
+
+    right: -35%;
+    top: 50%;
+
+    opacity: 0.2;
+    margin-top: 23rem;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   <= 360px
+===================================================== */
+
+@media (max-width: 360px) {
+  .associations-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .associations-title {
+    font-size: 32px;
+  }
+
+  .association-item {
+    height: 72px;
+    padding: 8px;
+  }
+
+  .association-item img {
+    max-width: 80%;
+    max-height: 28px;
+    
   }
 }
