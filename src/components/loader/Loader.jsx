@@ -19,7 +19,7 @@ export default function Loader() {
 
     const animation = gsap.to(progress, {
       value: 100,
-      duration: 1, 
+      duration: 4, 
       ease: "none",
 
       onUpdate: () => {

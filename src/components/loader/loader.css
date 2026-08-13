@@ -13,9 +13,6 @@
 }
 
 
-/* =========================
-   VIDEO
-========================= */
 
 .loader-video {
   position: absolute;
@@ -30,60 +27,27 @@
 }
 
 
-/* =========================
-   OVERLAY
-========================= */
 
 .loader-overlay {
   position: absolute;
   inset: 0;
-
   background: rgba(0, 0, 0, 0.2);
-
   z-index: 2;
-
   pointer-events: none;
 }
 
 
-/* =========================
-   PERCENTAGE
-========================= */
-
-/* .loader-percentage {
-  position: absolute;
-
-  top: 30px;
-  right: 40px;
-
-
-  z-index: 3;
-
-  color: gray;
-
-  font-size: 58px;
-  font-weight: 500;
-
-  font-family: Arial, sans-serif;
-
-  line-height: 1;
-    letter-spacing: -5px;
-
-} */
 
 .loader-percentage {
   position: absolute;
   top: 30px;
   right: 40px;
   z-index: 3;
-
   color: #8c8c8c;
-
   font-family: Georgia, "Times New Roman", serif;
   font-size: 72px;
   font-weight: 400;
   line-height: 0.9;
-
   letter-spacing: -5px;
    /* position: absolute; */
 

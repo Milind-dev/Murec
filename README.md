@@ -8,6 +8,9 @@
 ## locally run - npm start
 ## locally build - npm run build
 ## globally setup so by default font are this
+
+### reponsive (Desktop, Laptop, Mobile)
+
   
     .p {
     font-size: 18px;

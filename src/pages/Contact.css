@@ -24,10 +24,8 @@
 
 
 
-/* =====================================================
-   LAPTOP
-   1025px - 1366px
-===================================================== */
+   /* LAPTOP
+   1025px - 1366px */
 
 @media (min-width: 1025px) and (max-width: 1366px) {
   .contact {
@@ -56,10 +54,8 @@
 }
 
 
-/* =====================================================
-   TABLET
-   769px - 1024px
-===================================================== */
+   /* TABLET
+   769px - 1024px */
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .contact {
@@ -70,6 +66,7 @@
 
   .contact-content {
     max-width: 750px;
+    margin-right:  12rem
   }
 
   .contact-heading {
@@ -86,6 +83,7 @@
 
   .contact-link {
     margin-top: 28px;
+    
   }
 
   .contact-arrow {
@@ -99,10 +97,8 @@
 }
 
 
-/* =====================================================
-   MOBILE
-   <= 768px
-===================================================== */
+   /* MOBILE
+   <= 768px */
 
 @media (max-width: 768px) {
   .contact {
@@ -141,6 +137,8 @@
     gap: 8px;
 
     max-width: 100%;
+        margin-right:  8rem
+
   }
 
   .contact-arrow {
@@ -156,10 +154,8 @@
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-   <= 480px
-===================================================== */
+   /* SMALL MOBILE
+   <= 480px */
 
 @media (max-width: 480px) {
   .contact {
@@ -182,6 +178,8 @@
     margin-top: 30px;
 
     gap: 7px;
+        margin-right:  8rem
+
   }
 
   .contact-arrow {
@@ -195,10 +193,8 @@
 }
 
 
-/* =====================================================
-   VERY SMALL MOBILE
-   <= 360px
-===================================================== */
+/*    VERY SMALL MOBILE
+   <= 360px */
 
 @media (max-width: 360px) {
   .contact {
@@ -224,16 +220,9 @@
 }
 
 
-/* =====================================================
-   TOUCH DEVICES
-===================================================== */
 
 @media (hover: none) and (pointer: coarse) {
   .water-letter {
-    /*
-      Mouse distortion isn't useful on touch devices.
-      Keep letters stable.
-    */
     transform: none !important;
   }
 }
