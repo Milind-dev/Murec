@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Navbar.css";
 import murec from "../../assests/images/murecicon.png"
 
+import AnimatedButton from "../common/AnimatedButton";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const navItems = [
@@ -24,6 +26,12 @@ const navItems = [
 
 export default function Navbar() {
   const navRef = useRef(null);
+
+    const handleLogin = () => {
+      console.log("Login clicked");
+    };
+
+
   useEffect(() => {
     const nav = navRef.current;
     if (!nav) return;
@@ -131,6 +139,7 @@ export default function Navbar() {
       ctx.revert();
     };
   }, []);
+  
 
   return (
     <nav ref={navRef} className="navbar">
@@ -148,7 +157,9 @@ export default function Navbar() {
         ))}
       </div>
 
-      <button className="nav-button">Get Started</button>
+      {/* <button className="nav-button">Get Started</button> */}
+      <AnimatedButton onClick={handleLogin}>Login</AnimatedButton>
+      
     </nav>
   );
 }

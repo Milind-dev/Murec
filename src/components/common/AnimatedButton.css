@@ -1,0 +1,83 @@
+.animated-button {
+  position: relative;
+  overflow: hidden;
+
+  padding: 9px 18px;
+  border: 1px solid #111827;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transform-origin: center;
+
+  min-height: 38px;
+  white-space: nowrap;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button-bg {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  border-radius: 50%;
+
+  background: #111827;
+
+  pointer-events: none;
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .animated-button {
+    padding: 9px 18px;
+    font-size: 14px;
+    min-height: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .animated-button {
+    padding: 8px 16px;
+    font-size: 13px;
+    min-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: 5px;
+    min-height: 34px;
+    border-radius: 5px;
+        display: none;
+
+  }
+}
+
+@media (max-width: 360px) {
+  .animated-button {
+    padding: 6px 12px;
+    font-size: 11px;
+    min-height: 32px;
+  }
+}
