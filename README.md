@@ -7,9 +7,10 @@
 
 ## locally run - npm start
 ## locally build - npm run build
+## reponsive (Desktop, Laptop, Mobile)
+
 ## globally setup so by default font are this
 
-### reponsive (Desktop, Laptop, Mobile)
 
   
     .p {
