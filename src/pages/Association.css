@@ -133,52 +133,6 @@
 }
 
 
-/* 
-@media (max-width: 768px) {
-  .associations-section {
-    padding: 60px 20px;
-    min-height: auto;
-  }
-  .associations-heading-wrapper {
-    margin-bottom: 40px;
-  }
-  .associations-title {
-    font-size: 48px;
-  }
- .associations-left {
-    width: 100%;
-  }
-  .associations-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-  .association-item {
-    height: 90px;
-  }
-
-  .association-item:nth-child(3n) {
-    border-right: 1px solid
-      rgba(0, 0, 0, 0.14);
-  }
-  .association-item:nth-child(2n) {
-    border-right: none;
-  }
-  .associations-artwork {
-    width: 70%;
-    height: 40%;
-    right: -20%;
-    top: 45%;
-    opacity: 0.35;
-  }
-} */
-
-
-
-/* =====================================================
-   SMALL LAPTOP / TABLET
-   769px - 1024px
-===================================================== */
-
 @media (min-width: 769px) and (max-width: 1024px) {
   .associations-section {
     min-height: 100vh;
@@ -223,10 +177,6 @@
 }
 
 
-/* =====================================================
-   MOBILE
-   <= 768px
-===================================================== */
 
 @media (max-width: 768px) {
   .associations-section {
@@ -300,11 +250,6 @@
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-   <= 480px
-===================================================== */
-
 @media (max-width: 480px) {
   .associations-section {
     padding: 50px 16px 70px;
@@ -340,11 +285,6 @@
   }
 }
 
-
-/* =====================================================
-   VERY SMALL MOBILE
-   <= 360px
-===================================================== */
 
 @media (max-width: 360px) {
   .associations-section {

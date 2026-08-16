@@ -51,7 +51,8 @@ export default function Partners({ partners }) {
     const st = ScrollTrigger.create({
       trigger: wrapRef.current,
 
-      start: "top top",
+      // start: "top top",
+      start: "top 115px",
 
       end: `+=${stepsCount * 100}%`,
 
